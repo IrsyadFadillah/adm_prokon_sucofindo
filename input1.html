@@ -157,7 +157,7 @@
             <div class="container-fluid pt-4 px-4">               
                 <div class="row g-4">
                     
-                         <div class="col-sm-6 col-xl-3" type="button" data-bs-toggle="modal" data-bs-target="#popup1" >
+                        <div class="col-sm-6 col-xl-3" type="button" data-bs-toggle="modal" data-bs-target="#popup1" >
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             
                             <div class="ms-3">
@@ -277,7 +277,6 @@
                             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
                             Designed By <a href="https://htmlcodex.com">HTML Codex</a>
                         </br>
-                        Distributed By <a class="border-bottom" href="https://themewagon.com" target="_blank">ThemeWagon</a>
                         </div>
                     </div>
                 </div>
@@ -469,7 +468,14 @@
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Teknologi:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Jenis Teknologi</option>
+                                    <option value="-">-</option>
+                                    <option value="Tradisional">Tradisional</option>
+                                    <option value="Semi Intensif">Semi Intensif</option>
+                                    <option value="Intensif">Intensif</option>
+                                    <option value="Bioflok">Bioflok</option>
+                                </select>
                             </div>
                             </form>
                         </div>
@@ -526,7 +532,13 @@
                             <form>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Jenis Pakan:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Jenis Pakan</option>
+                                    <option value="-">-</option>
+                                    <option value="Komersil Apung">Komersil Apung</option>
+                                    <option value="Komersil Tenggelam">Komersil Tenggelam</option>
+                                    <option value="Mandiri Apung">Mandiri Apung</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Jumlah Pakan (kg):</label>
@@ -602,11 +614,21 @@
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Sumber Modal:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Sumber Modal</option>
+                                    <option value="-">-</option>
+                                    <option value="Sendiri">Sendiri</option>
+                                    <option value="Kredit">Kredit</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Sumber Kredit:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Sumber Kredit</option>
+                                    <option value="-">-</option>
+                                    <option value="Sendiri">Kerabat</option>
+                                    <option value="Kredit">Lain-lain</option>
+                                </select>
                             </div>
                             </form>
                         </div>
@@ -630,15 +652,31 @@
                             <form>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">IPAL</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>IPALl</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Tandon:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Tandon</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Greenbelt:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Greenbelt</option>
+                                    <option value="-">-</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Jarak ke Bibir Pantai (m):</label>
@@ -646,7 +684,17 @@
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Sumber Air:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Sumber Air</option>
+                                    <option value="-">-</option>
+                                    <option value="Mata Air">Mata Air</option>
+                                    <option value="Air tanah">Air tanah</option>
+                                    <option value="Sumbur bor">Sumbur bor</option>
+                                    <option value="Sungai">Sungai</option>
+                                    <option value="Laut">Laut</option>
+                                    <option value="Danau">Danau</option>
+                                    <option value="Campuran">Campuran</option>
+                                </select>
                             </div>
                             </form>
                         </div>
@@ -670,15 +718,31 @@
                             <form>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Status Izin</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Status Izin</option>
+                                    <option value="-">-</option>
+                                    <option value="Sudah Berizin">Sudah Berizin</option>
+                                    <option value="Tidak Berizin">Tidak Berizin</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Status NIB:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Status NIB</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Skala Usaha:</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Skala Usaha</option>
+                                    <option value="-">-</option>
+                                    <option value="Mikro">Mikro</option>
+                                    <option value="Kecil">Kecil</option>
+                                    <option value="Menengah">Menengah</option>
+                                </select>
                             </div>
                             </form>
                         </div>
@@ -702,20 +766,47 @@
                             <form>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Asuransi</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Asuransi</option>
+                                    <option value="-">-</option>
+                                    <option value="Sudah">Sudah</option>
+                                    <option value="Belum">Belum</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Bantuan</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Bantuan</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">KKP</option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
+                                    <option value="Lain-lain">Lain-lain</option>
+                                </select>
                             </div><div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Penghargaan</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Penghargaan</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
                             </div><div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Dukungan Pemda</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Dukungan Pemda</option>
+                                    <option value="-">-</option>
+                                    <option value="Penyuluhan">Penyuluh</option>
+                                    <option value="Bimtek">Bimtek</option>
+                                    <option value="Tidak Ada">Tidak Ada</option>
+                                </select>
                             </div><div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Dukungan Pusat</label>
-                                <input type="text" class="form-control" id="recipient-name">
+                                <select class="form-select mb-3" aria-label="Default select example" >
+                                    <option value="" disabled selected hidden>Dukungan Pusat</option>
+                                    <option value="-">-</option>
+                                    <option value="Ada">Ada</option>
+                                    <option value="Tidak">Tidak</option>
+                                </select>
                             </div>
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Nama Penyuluh:</label>
