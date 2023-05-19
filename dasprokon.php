@@ -91,7 +91,7 @@ $total = $row['total'];
           background-color: #dcd6d6;
         }
         .scroll {
-            height: 400px;
+            height: 550px;
             overflow: scroll;
         }
       </style>
@@ -110,11 +110,13 @@ $total = $row['total'];
     <!-- Sidebar Start -->
     <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-light navbar-light">
-            <a href="#" class="navbar-brand mx-4 mb-3">
-                <h3 class="text-primary"></i>SUCOFINDO</h3></a>
+            
             <div class="navbar-nav w-100">
+                <a href="dasprokon.php" class="navbar-brand mx-5 mb-3">
+                    <img src="img/Logo_sucofindo.png" width="90" height="50" class="d-inline-block align-text-top align-items-center">
+                </a>
                 <a href="dasprokon.php" class="nav-link active"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="input1.php" class="nav-link"><i class="fa fa-laptop me-2"></i>Input Data</a>
+                <a href="input1.php" class="nav-link"><i class="fa fa-laptop me-2"></i>Input Data</a>
             </div>
         </nav>
     </div>
@@ -126,7 +128,7 @@ $total = $row['total'];
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0" style="height:60px;">
             <a href="dasprokon.php" class="navbar-brand d-flex d-lg-none me-4">
-                <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                <img src="img/Logo_sucofindo.png" width="90" height="50" class="d-inline-block align-text-top align-items-center">
             </a>
             <a href="#" class="sidebar-toggler flex-shrink-0">
                 <i class="fa fa-bars"></i>
@@ -190,174 +192,174 @@ $total = $row['total'];
                 <div class="table-responsive scroll">
                     <table class="table text-start align-middle table-bordered table-hover mb-0" id="example">
                             <tr class="text-dark table-border" >
-                                <th rowspan="3"  style="border-color: black;">No</th>
+                                <th rowspan="3"  style="border-color: grey;">No</th>
+                            </tr>
+                            <tr class="text-dark table-border">
+                                <th colspan="8" style="border-color: grey;">DATA UMUM PEMBUDIDAYA</th>
+                                <th colspan="8" style="border-color: grey;">LOKASI USAHA</th>
+                                <th colspan="4" style="border-color: grey;">KOMODITAS</th>
+                                <th colspan="8" style="border-color: grey;">TEKNOLOGI</th>
+                                <th colspan="4" style="border-color: grey;">PRODUKSI & DISTRIBUSI</th>
+                                <th colspan="5" style="border-color: grey;">PAKAN</th>
+                                <th colspan="4" style="border-color: grey;">BENIH</th>
+                                <th colspan="5" style="border-color: grey;">MODAL & TENAGA KERJA</th>
+                                <th colspan="6" style="border-color: grey;">LINGKUNGAN</th>
+                                <th colspan="4" style="border-color: grey;">PERIZINAN</th>
+                                <th colspan="8" style="border-color: grey;">LAIN-LAIN</th>
+                                <th colspan="5" style="border-color: grey;">ENUMERATOR/PETUGAS SENSUS</th>
+                                <th colspan="2"  style="border-color: grey;">UPT</th>
+                                <th rowspan="2"  style="border-color: grey;">AKSI</th>
                             </tr>
                             <tr class="table-border">
-                                <th colspan="8" style="border-color: black;">DATA UMUM PEMBUDIDAYA</th>
-                                <th colspan="8" style="border-color: black;">LOKASI USAHA</th>
-                                <th colspan="4" style="border-color: black;">KOMODITAS</th>
-                                <th colspan="8" style="border-color: black;">TEKNOLOGI</th>
-                                <th colspan="4" style="border-color: black;">PRODUKSI & DISTRIBUSI</th>
-                                <th colspan="5" style="border-color: black;">PAKAN</th>
-                                <th colspan="4" style="border-color: black;">BENIH</th>
-                                <th colspan="5" style="border-color: black;">MODAL & TENAGA KERJA</th>
-                                <th colspan="6" style="border-color: black;">LINGKUNGAN</th>
-                                <th colspan="4" style="border-color: black;">PERIZINAN</th>
-                                <th colspan="8" style="border-color: black;">LAIN-LAIN</th>
-                                <th colspan="5" style="border-color: black;">ENUMERATOR/PETUGAS SENSUS</th>
-                                <th colspan="2"  style="border-color: black;">UPT</th>
-                                <th rowspan="2"  style="border-color: black;">AKSI</th>
-                            </tr>
-                            <tr class="table-border">
-                                <th scope="col" style="border-color: black;">NAMA</th>
-                                <th scope="col" style="border-color: black;">NIK</th>
-                                <th scope="col" style="border-color: black;">USIA</th>
-                                <th scope="col" style="border-color: black;">AGAMA</th>
-                                <th scope="col" style="border-color: black;">GENDER</th>
-                                <th scope="col" style="border-color: black;">PENDIDIKAN</th>
-                                <th scope="col" style="border-color: black;">JUMLAH ANGGOTA</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">ALAMAT</th>
-                                <th scope="col" style="border-color: black;">KELURAHAN/DESA</th>
-                                <th scope="col" style="border-color: black;">KECAMATAN</th>
-                                <th scope="col" style="border-color: black;">KABUPATEN/KOTA</th>
-                                <th scope="col" style="border-color: black;">PROVINSI</th>
-                                <th scope="col" style="border-color: black;">LATITUDE</th>
-                                <th scope="col" style="border-color: black;">LONGITUDE</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">KOMODITAS</th>
-                                <th scope="col" style="border-color: black;">KELOMPOK</th>
-                                <th scope="col" style="border-color: black;">BIOTA</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">JENIS USAHA</th>
-                                <th scope="col" style="border-color: black;">STATUS KUSUKA</th>
-                                <th scope="col" style="border-color: black;">STATUS KEPEMILIKAN</th>
-                                <th scope="col" style="border-color: black;">LUAS AREAL(Ha)</th>
-                                <th scope="col" style="border-color: black;">MEDIA PEMELIHARAAN</th>
-                                <th scope="col" style="border-color: black;">KEPADATAN PEMELIHARAAN</th>
-                                <th scope="col" style="border-color: black;">TEKNOLOGI</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">PRODUKSI (ton/Ha/tahun)</th>
-                                <th scope="col" style="border-color: black;">DISTRIBUSI</th>
-                                <th scope="col" style="border-color: black;">HARGA JUAL(Rp)</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">JENIS PAKAN</th>
-                                <th scope="col" style="border-color: black;">JUMLAH PAKAN(Kg)</th>
-                                <th scope="col" style="border-color: black;">SUMBER SUPLAI</th>
-                                <th scope="col" style="border-color: black;">HARGA PAKAN(Rp)</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">SIMBER BENIH</th>
-                                <th scope="col" style="border-color: black;">JUMLAH BENIH(ekor/kg)</th>
-                                <th scope="col" style="border-color: black;">HARGA BENIH(Rp)</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">JUMLAH TK</th>
-                                <th scope="col" style="border-color: black;">MODAL(OMZET-Rp)</th>
-                                <th scope="col" style="border-color: black;">SUMBER MODAL</th>
-                                <th scope="col" style="border-color: black;">SUMBER KREDIT</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">IPAL</th>
-                                <th scope="col" style="border-color: black;">TANDON</th>
-                                <th scope="col" style="border-color: black;">GREENBELT</th>
-                                <th scope="col" style="border-color: black;">JARAK KE BIBIR PANTAI(m)</th>
-                                <th scope="col" style="border-color: black;">SUMBER AIR</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">STATUS IZIN</th>
-                                <th scope="col" style="border-color: black;">STATUS NIB</th>
-                                <th scope="col" style="border-color: black;">SKALA USAHA</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">ASURANSI</th>
-                                <th scope="col" style="border-color: black;">BANTUAN</th>
-                                <th scope="col" style="border-color: black;">PENGHARGAAN</th>
-                                <th scope="col" style="border-color: black;">DUKUNGAN PEMDA</th>
-                                <th scope="col" style="border-color: black;">DUKUNGAN PUSAT</th>
-                                <th scope="col" style="border-color: black;">NAMA PENYULUH</th>
-                                <th scope="col" style="border-color: black;">SERTIFIKAT</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">NAMA PETUGAS</th>
-                                <th scope="col" style="border-color: black;">NIK</th>
-                                <th scope="col" style="border-color: black;">WAKTU SENSUS</th>
-                                <th scope="col" style="border-color: black;">PERUBAHAN TERKAHIR</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
-                                <th scope="col" style="border-color: black;">UPT</th>
-                                <th scope="col" style="border-color: black;">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">NAMA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">NIK</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">USIA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AGAMA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">GENDER</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">PENDIDIKAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JUMLAH ANGGOTA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">ALAMAT</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">KELURAHAN/DESA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">KECAMATAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">KABUPATEN/KOTA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">PROVINSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">LATITUDE</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">LONGITUDE</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">KOMODITAS</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">KELOMPOK</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">BIOTA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JENIS USAHA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">STATUS KUSUKA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">STATUS KEPEMILIKAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">LUAS AREAL(Ha)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">MEDIA PEMELIHARAAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">KEPADATAN PEMELIHARAAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">TEKNOLOGI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">PRODUKSI (ton/Ha/tahun)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">DISTRIBUSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">HARGA JUAL(Rp)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JENIS PAKAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JUMLAH PAKAN(Kg)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SUMBER SUPLAI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">HARGA PAKAN(Rp)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SIMBER BENIH</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JUMLAH BENIH(ekor/kg)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">HARGA BENIH(Rp)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JUMLAH TK</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">MODAL(OMZET-Rp)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SUMBER MODAL</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SUMBER KREDIT</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">IPAL</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">TANDON</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">GREENBELT</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">JARAK KE BIBIR PANTAI(m)</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SUMBER AIR</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">STATUS IZIN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">STATUS NIB</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SKALA USAHA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">ASURANSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">BANTUAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">PENGHARGAAN</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">DUKUNGAN PEMDA</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">DUKUNGAN PUSAT</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">NAMA PENYULUH</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SERTIFIKAT</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">NAMA PETUGAS</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">NIK</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">WAKTU SENSUS</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">PERUBAHAN TERKAHIR</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">UPT</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
                             </tr>
                             <?php
         $i = 1;
         foreach ($sensus as $row) :
             ?>
             <tbody id="myTable">
-                            <tr>
-                                <td><?php echo $i; ?></td>
-                                <td><?php echo $row["nama"]; ?></td>
-                                <td><?php echo $row["nik"]; ?></td>
-                                <td><?php echo $row["usia"]; ?></td>
-                                <td><?php echo $row["agama"]; ?></td>
-                                <td><?php echo $row["gender"]; ?></td>
-                                <td><?php echo $row["pendidikan"]; ?></td>
-                                <td><?php echo $row["jml_keluarga"]; ?></td>
+                            <tr style="border-color: grey;">
+                                <td class="text-dark" ><?php echo $i; ?></td>
+                                <td class="text-dark" ><?php echo $row["nama"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["nik"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["usia"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["agama"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["gender"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["pendidikan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jml_keluarga"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup1<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["alamat"]; ?></td>
-                                <td><?php echo $row["kelurahan"]; ?></td>
-                                <td><?php echo $row["kecamatan"]; ?></td>
-                                <td><?php echo $row["kabupaten"]; ?></td>
-                                <td><?php echo $row["provinsi"]; ?></td>
-                                <td><?php echo $row["latitude"]; ?></td>
-                                <td><?php echo $row["longtitude"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["alamat"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["kelurahan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["kecamatan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["kabupaten"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["provinsi"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["latitude"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["longtitude"]; ?></td>
                                 <td><a  data-bs-toggle="modal" data-bs-target="#popup2<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["komoditas"]; ?></td>
-                                <td><?php echo $row["kelompok"]; ?></td>
-                                <td><?php echo $row["biota"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["komoditas"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["kelompok"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["biota"]; ?></td>
                                 <td><a  data-bs-toggle="modal" data-bs-target="#popup3<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["jenis_usaha"]; ?></td>
-                                <td><?php echo $row["status_kusuka"]; ?></td>
-                                <td><?php echo $row["status_pemilik"]; ?></td>
-                                <td><?php echo $row["luas_areal"]; ?></td>
-                                <td><?php echo $row["media_pemeliharaan"]; ?></td>
-                                <td><?php echo $row["kepadatan_pemeliharaan"]; ?></td>
-                                <td><?php echo $row["teknologi"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jenis_usaha"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["status_kusuka"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["status_pemilik"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["luas_areal"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["media_pemeliharaan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["kepadatan_pemeliharaan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["teknologi"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup4<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["produksi"]; ?></td>
-                                <td><?php echo $row["distribusi"]; ?></td>
-                                <td><?php echo $row["harga_jual"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["produksi"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["distribusi"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["harga_jual"]; ?></td>
                                 <td><a  data-bs-toggle="modal" data-bs-target="#popup5<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["jenis_pakan"]; ?></td>
-                                <td><?php echo $row["jml_pakan"]; ?></td>
-                                <td><?php echo $row["sumber_suplai"]; ?></td>
-                                <td><?php echo $row["harga_pakan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jenis_pakan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jml_pakan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["sumber_suplai"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["harga_pakan"]; ?></td>
                                 <td><a  data-bs-toggle="modal" data-bs-target="#popup6<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["sumber_benih"]; ?></td>
-                                <td><?php echo $row["jml_benih"]; ?></td>
-                                <td><?php echo $row["harga_benih"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["sumber_benih"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jml_benih"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["harga_benih"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup7<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["jml_tk"]; ?></td>
-                                <td><?php echo $row["modal"]; ?></td>
-                                <td><?php echo $row["sumber_modal"]; ?></td>
-                                <td><?php echo $row["sumber_kredit"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jml_tk"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["modal"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["sumber_modal"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["sumber_kredit"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup8<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["ipal"]; ?></td>
-                                <td><?php echo $row["tandon"]; ?></td>
-                                <td><?php echo $row["greenbelt"]; ?></td>
-                                <td><?php echo $row["jarak_pantai"]; ?></td>
-                                <td><?php echo $row["sumber_air"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["ipal"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["tandon"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["greenbelt"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["jarak_pantai"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["sumber_air"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup9<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["status_izin"]; ?></td>
-                                <td><?php echo $row["status_nib"]; ?></td>
-                                <td><?php echo $row["skala_usaha"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["status_izin"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["status_nib"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["skala_usaha"]; ?></td>
                                 <td><a  data-bs-toggle="modal" data-bs-target="#popup10<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["asuransi"]; ?></td>
-                                <td><?php echo $row["bantuan"]; ?></td>
-                                <td><?php echo $row["penghargaan"]; ?></td>
-                                <td><?php echo $row["dukungan_pemda"]; ?></td>
-                                <td><?php echo $row["dukungan_pusat"]; ?></td>
-                                <td><?php echo $row["nama_penyuluh"]; ?></td>
-                                <td><?php echo $row["sertifikat"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["asuransi"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["bantuan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["penghargaan"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["dukungan_pemda"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["dukungan_pusat"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["nama_penyuluh"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["sertifikat"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup11<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["nama_petugas"]; ?></td>
-                                <td><?php echo $row["nik_petugas"]; ?></td>
-                                <td><?php echo $row["waktu_sensus"]; ?></td>
-                                <td><?php echo $row["perubahan_terakhir"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["nama_petugas"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["nik_petugas"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["waktu_sensus"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["perubahan_terakhir"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup12<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                                <td><?php echo $row["upt"]; ?></td>
+                                <td class="text-dark" ><?php echo $row["upt"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup13<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
                                <td><a href="hapus.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm" style="font-weight: 300px;" name="hapus" onclick="return confirm('Apakah Yakin Hapus Data Sensus Ini?')"><i class="bi bi-trash-fill"></i></a></td>
                             </tr>

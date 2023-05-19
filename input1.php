@@ -76,11 +76,12 @@ if (isset($_POST['tambah'])) {
         <!-- Sidebar Start -->
      <div class="sidebar pe-4 pb-3">
         <nav class="navbar bg-light navbar-light">
-            <a href="#" class="navbar-brand mx-4 mb-3">
-                <h3 class="text-primary"></i>SUCOFINDO</h3></a>
             <div class="navbar-nav w-100">
-                <a href="dasprokon.php" class="nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
-                    <a href="input1.php" class="nav-link active"><i class="fa fa-laptop me-2"></i>Input Data</a>
+                <a href="dasprokon.php" class="navbar-brand mx-5 mb-3">
+                    <img src="img/Logo_sucofindo.png" width="90" height="50" class="d-inline-block align-text-top align-items-center">
+                </a>
+                <a href="dasprokon.php" class="nav-link "><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
+                <a href="input1.php" class="nav-link active"><i class="fa fa-laptop me-2"></i>Input Data</a>
             </div>
         </nav>
     </div>
@@ -92,7 +93,7 @@ if (isset($_POST['tambah'])) {
             <!-- Navbar Start -->
             <nav class="navbar navbar-expand bg-light navbar-light sticky-top px-4 py-0"  style="height:60px;">
                 <a href="#" class="navbar-brand d-flex d-lg-none me-4">
-                    <h2 class="text-primary mb-0"><i class="fa fa-hashtag"></i></h2>
+                    <img src="img/Logo_sucofindo.png" width="90" height="50" class="d-inline-block align-text-top align-items-center">
                 </a>
                 <a href="#" class="sidebar-toggler flex-shrink-0">
                     <i class="fa fa-bars"></i>
@@ -116,7 +117,7 @@ if (isset($_POST['tambah'])) {
             <div class="container-fluid pt-4 px-4">
                 <div class="bg-light rounded h-100 p-4">
                     <div class="border rounded p-4 pb-0 mb-4">
-                        <figure class="text-center">
+                        <figure class="text-center text-dark">
                             <blockquote class="blockquote">
                                 <p><b>Input Data Sensus Pembudidaya</p>
                             </blockquote>
@@ -124,7 +125,7 @@ if (isset($_POST['tambah'])) {
                     </div>
                 </div>
         </div>
-        <div class="container-fluid pt-4 px-4">               
+        <div class="container-fluid pt-4 px-4 text-dark">               
             <div class="row g-4">
                 
                     <div class="col-sm-6 col-xl-3" type="button" data-bs-toggle="modal" data-bs-target="#popup1" >
@@ -175,7 +176,7 @@ if (isset($_POST['tambah'])) {
                     <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                         
                         <div class="ms-3">
-                            <p class="mb-2"><b>Pakan</b></p>
+                            <p class="mb-2 "><b>Pakan</b></p>
                         </div>
                     </div>
                 </div>
