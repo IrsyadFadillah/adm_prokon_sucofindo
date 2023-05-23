@@ -91,7 +91,7 @@ $total = $row['total'];
           background-color: #dcd6d6;
         }
         .scroll {
-            height: 550px;
+            height: 300px;
             overflow: scroll;
         }
       </style>
@@ -248,7 +248,7 @@ $total = $row['total'];
                                 <th scope="col" style="border-color: grey;" class="text-dark">SUMBER SUPLAI</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">HARGA PAKAN(Rp)</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
-                                <th scope="col" style="border-color: grey;" class="text-dark">SIMBER BENIH</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SUMBER BENIH</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">JUMLAH BENIH(ekor/kg)</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">HARGA BENIH(Rp)</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
@@ -470,7 +470,7 @@ $total = $row['total'];
                     <div class="modal-body">
                     <div class="mb-3">
                         <label for="alamat" class="col-form-label">Alamat:</label>
-                        <textarea class="form-control" id="alamat" name="alamat" value="<?= $row['alamat'];?>"></textarea>
+                        <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $row['alamat'];?>">
                     </div>
                     <div class="mb-3">
                         <label for="kelurahan" class="col-form-label">Kelurahan/ Desa:</label>
@@ -582,7 +582,7 @@ $total = $row['total'];
                         <div class="mb-3">
                             <label for="teknologi" class="col-form-label">Teknologi:</label>
                             <select class="form-select mb-3" aria-label="Default select example" id="teknologi" name="teknologi">
-                            <?php $teknologi = $row['tekn$teknologi']; ?>
+                            <?php $teknologi = $row['teknologi']; ?>
                                 <option value="" <?= $teknologi == '' ? 'selected' : null ?> disabled selected hidden>Jenis Teknologi</option>
                                 <option value="-" <?= $teknologi == '-' ? 'selected' : null ?>>-</option>
                                 <option value="Tradisional" <?= $teknologi == 'Tradisional' ? 'selected' : null ?>>Tradisional</option>
@@ -616,7 +616,7 @@ $total = $row['total'];
                         </div>
                         <div class="mb-3">
                             <label for="distribusi" class="col-form-label">Distribusi:</label>
-                            <textarea class="form-control" id="distribusi" name="distribusi" value="<?= $row['distribusi'];?>"></textarea>
+                            <input type="text" class="form-control" id="distribusi" name="distribusi" value="<?= $row['distribusi'];?>">
                         </div>
                         <div class="mb-3">
                             <label for="harga_jual" class="col-form-label">Harga Jual:</label>
@@ -657,7 +657,7 @@ $total = $row['total'];
                         </div>
                         <div class="mb-3">
                             <label for="sumber_suplai" class="col-form-label">Sumber Suplai:</label>
-                            <textarea class="form-control" id="sumber_suplai" name="sumber_suplai" value="<?= $row['sumber_suplai'];?>" ></textarea>
+                            <input type="text" class="form-control" id="sumber_suplai" name="sumber_suplai" value="<?= $row['sumber_suplai'];?>" >
                         </div>
                         <div class="mb-3">
                             <label for="harga_pakan" class="col-form-label">Harga Pakan (Rp):</label>
@@ -666,7 +666,7 @@ $total = $row['total'];
 
                         <div class="modal-footer">
                         <button href="dasprokon.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>
-                        <button name="update" class="btn btn-primary" onclick="return confirm('Apakah Yakin Ubah Data Pakan Ini?')"></i> Simpan</button>
+                        <button type="submit" name="update" class="btn btn-primary" onclick="return confirm('Apakah Yakin Ubah Data Pakan Ini?')"></i> Simpan</button>
                        </div>
             
                     </div>
@@ -685,7 +685,7 @@ $total = $row['total'];
                     <div class="modal-body">
                         <div class="mb-3">
                             <label for="sumber_benih" class="col-form-label">Sumber Benih:</label>
-                            <textarea class="form-control" id="sumber_benih" name="sumber_benih" value="<?= $row['sumber_benih'];?>"></textarea>
+                            <input type="text" class="form-control" id="sumber_benih" name="sumber_benih" value="<?= $row['sumber_benih'];?>">
                         </div>
                         <div class="mb-3">
                             <label for="jml_benih" class="col-form-label">Jumlah benih (ekor)(kg):</label>
@@ -960,13 +960,13 @@ $total = $row['total'];
                         </div>
                         <div class="mb-3">
                             <label for="waktu_sensus" class="col-form-label">Waktu Sensus:</label>
-                            <input type="date" class="form-control" id="waktu_sensus" name="waktu_sensus" value="<?= $row['waktu_sensus'];?>">
-                            <input type="time" class="form-control" id="waktu_sensus" name="waktu_sensus" value="<?= $row['waktu_sensus'];?>">
+                            <input type="datetime-local" class="form-control" id="waktu_sensus" name="waktu_sensus" value="<?= $row['waktu_sensus'];?>">
+                            
                         </div>
                         <div class="mb-3">
                             <label for="perubahan_terakhir" class="col-form-label">Perubahan Terakhir:</label>
-                            <input type="date" class="form-control" id="perubahan_terakhir" name="perubahan_terakhir" value="<?= $row['perubahan_terakhir'];?>" >
-                            <input type="time" class="form-control" id="perubahan_terakhir" name="perubahan_terakhir" value="<?= $row['perubahan_terakhir'];?>" >
+                            <input type="datetime-local" class="form-control" id="perubahan_terakhir" name="perubahan_terakhir" value="<?= $row['perubahan_terakhir'];?>" >
+                            
                         </div>
                         <div class="modal-footer">
                         <button href="dasprokon.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kembali</button>

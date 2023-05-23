@@ -796,13 +796,13 @@ if (isset($_POST['tambah'])) {
                         </div>
                         <div class="mb-3">
                             <label for="waktu_sensus" class="col-form-label">Waktu Sensus:</label>
-                            <input type="date" class="form-control" id="waktu_sensus" name="waktu_sensus" >
-                            <input type="time" class="form-control" id="waktu_sensus" name="waktu_sensus" >
+                            <input type="datetime-local" class="form-control" id="waktu_sensus" name="waktu_sensus" >
+                            
                         </div>
                         <div class="mb-3">
                             <label for="perubahan_terakhir" class="col-form-label">Perubahan Terakhir:</label>
-                            <input type="date" class="form-control" id="perubahan_terakhir" name="perubahan_terakhir" >
-                            <input type="time" class="form-control" id="perubahan_terakhir" name="perubahan_terakhir" >
+                            <input type="datetime-local" class="form-control" id="perubahan_terakhir" name="perubahan_terakhir" >
+                            
                         </div>
                         <div class="modal-footer">
                         <button href="input1.php" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Simpan</button>

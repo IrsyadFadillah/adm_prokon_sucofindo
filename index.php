@@ -209,7 +209,7 @@ $row = mysqli_fetch_assoc($result);
                                 <th scope="col" style="border-color: grey;" class="text-dark">SUMBER SUPLAI</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">HARGA PAKAN(Rp)</th>
                                 
-                                <th scope="col" style="border-color: grey;" class="text-dark">SIMBER BENIH</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">SUMBER BENIH</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">JUMLAH BENIH(ekor/kg)</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">HARGA BENIH(Rp)</th>
                                 
