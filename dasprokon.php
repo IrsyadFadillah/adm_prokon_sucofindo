@@ -23,13 +23,65 @@ if (isset($_POST['update'])) {
                 alert('Data sensus gagal diupdate!');
             </script>";
     }
+    exit;
+}
+
+if (isset($_POST['verif'])) {
+    if (verif($_POST) > 0) {
+        echo "<script>
+                <h3>Teverifikasi</3>;
+            </script>";
+    } else {
+       
+        echo "<script>
+                 <h3>Tidak Teverifikasi</3>;
+            </script>";
+    }
+}
+
+if(isset($_GET['verifyid'])){
+    $idToUpdate = $_GET['verifyid'];
+
+    $data = array(
+        "verif" => 1,
+    );
+
+    $condition = array(
+        "id" => $idToUpdate
+    );
+
+    updateData("sensus", $data, $condition);
+
+    header("location: dasprokon.php");
+    exit;
+}
+
+if(isset($_GET['unverifyid'])){
+    $idToUpdate = $_GET['unverifyid'];
+
+    $data = array(
+        "verif" => 0,
+    );
+
+    $condition = array(
+        "id" => $idToUpdate
+    );
+
+    updateData("sensus", $data, $condition);
+
+    header("location: dasprokon.php");
+    exit;
 }
 
 $query = "SELECT COUNT(*) as total FROM sensus";
 $result = mysqli_query($koneksi, $query);
 $row = mysqli_fetch_assoc($result);
 $total = $row['total'];
-  
+
+$query2 = "SELECT COUNT(*) as totalverif FROM sensus WHERE verif = 1";
+$result = mysqli_query($koneksi, $query2);
+$row = mysqli_fetch_assoc($result);
+$totalverif = $row['totalverif'];
 ?>
 
 <!DOCTYPE html>
@@ -172,6 +224,18 @@ $total = $row['total'];
                         </div>
                     </div>
                 </div>
+
+                <div class="col-sm-6 col-xl-3">
+                    <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
+                    <i class="fa fa-certificate fa-3x text-primary"></i>
+                        <div class="ms-5">
+                            <p class="mb-2">Terverifikasi</p>
+                            <h6 class="mb-0">
+                                <?=$totalverif?>
+                            </h6>
+                        </div>
+                    </div>
+                </div>
                 
             </div>
         </div>
@@ -206,9 +270,9 @@ $total = $row['total'];
                                 <th colspan="6" style="border-color: grey;">LINGKUNGAN</th>
                                 <th colspan="4" style="border-color: grey;">PERIZINAN</th>
                                 <th colspan="8" style="border-color: grey;">LAIN-LAIN</th>
-                                <th colspan="5" style="border-color: grey;">ENUMERATOR/PETUGAS SENSUS</th>
+                                <th colspan="6" style="border-color: grey;">ENUMERATOR/PETUGAS SENSUS</th>
                                 <th colspan="2"  style="border-color: grey;">UPT</th>
-                                <th rowspan="2"  style="border-color: grey;">AKSI</th>
+                                <th rowspan="2" style="border-color: grey;">STATUS</th>
                             </tr>
                             <tr class="table-border">
                                 <th scope="col" style="border-color: grey;" class="text-dark">NAMA</th>
@@ -275,6 +339,7 @@ $total = $row['total'];
                                 <th scope="col" style="border-color: grey;" class="text-dark">NAMA PENYULUH</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">SERTIFIKAT</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">AKSI</th>
+                                <th scope="col" style="border-color: grey;" class="text-dark">FOTO PETUGAS</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">NAMA PETUGAS</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">NIK</th>
                                 <th scope="col" style="border-color: grey;" class="text-dark">WAKTU SENSUS</th>
@@ -354,6 +419,7 @@ $total = $row['total'];
                                 <td class="text-dark" ><?php echo $row["nama_penyuluh"]; ?></td>
                                 <td class="text-dark" ><?php echo $row["sertifikat"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup11<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
+                                <td><img src="img/<?php echo $row["foto"]; ?>" width="80px" alt=""></td>
                                 <td class="text-dark" ><?php echo $row["nama_petugas"]; ?></td>
                                 <td class="text-dark" ><?php echo $row["nik_petugas"]; ?></td>
                                 <td class="text-dark" ><?php echo $row["waktu_sensus"]; ?></td>
@@ -361,7 +427,16 @@ $total = $row['total'];
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup12<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
                                 <td class="text-dark" ><?php echo $row["upt"]; ?></td>
                                 <td><a data-bs-toggle="modal" data-bs-target="#popup13<?= $row['id']; ?>" class="btn btn-warning btn-sm" style="font-weight: 300px;"><i class="bi bi-pencil-fill"></i></a><br></td>
-                               <td><a href="hapus.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm" style="font-weight: 300px;" name="hapus" onclick="return confirm('Apakah Yakin Hapus Data Sensus Ini?')"><i class="bi bi-trash-fill"></i></a></td>
+                                <td>
+                                    <div class="d-flex" style="gap:30px; justify-content: between;">
+                                        <?php if($row['verif'] == 0) : ?>
+                                        <a class="btn btn-danger btn-sm" style="font-weight: 300px;" name="verif" href="?verifyid=<?=$row['id']?>" value="terima" onclick="return confirm('Apakah Yakin Verifikasi Data Sensus Ini?')"><i class="bi bi-x"></i></a>
+                                        <?php else : ?>
+                                            <a class="btn btn-success btn-sm" style="font-weight: 300px;" name="verif" href="?unverifyid=<?=$row['id']?>" value="terima" onclick="return confirm('Apakah Yakin Unverifikasi Data Sensus Ini?')"><i class="bi bi-check"></i></a>
+                                        <?php endif ?>
+                                        <a href="hapus.php?id=<?= $row['id']; ?>" class="btn btn-danger btn-sm" style="font-weight: 300px; display:inline;" name="hapus" onclick="return confirm('Apakah Yakin Hapus Data Sensus Ini?')"><i class="bi bi-trash-fill"></i></a>
+                                    </div>    
+                            </td>
                             </tr>
                             </tbody>
                             <?php
@@ -950,6 +1025,15 @@ $total = $row['total'];
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                    <div class="mb-3">
+                            <label for="foto" class="col-form-label">Foto Petugas</label>
+                            <br>
+                            <img style="width:150px;" src="img/<?=$row['foto']?>" alt="">
+                            <br>
+                           <small>Abaikan Jika tidak ingin merubah foto</small> 
+                            <input type="hidden" name="fotolama" value="<?=$row['foto']?>">
+                            <input accept=".jpg, .png, .jpeg" type="file" class="form-control" id="myFileInput" name="foto">
+                        </div>
                         <div class="mb-3">
                             <label for="nama_petugas" class="col-form-label">Nama Petugas</label>
                             <input type="text" class="form-control" id="nama_petugas" name="nama_petugas" value="<?= $row['nama_petugas'];?>" >

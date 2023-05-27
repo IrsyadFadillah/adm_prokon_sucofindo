@@ -85,17 +85,52 @@
     $dukungan_pusat = ($data['dukungan_pusat']);
     $nama_penyuluh = ($data['nama_penyuluh']);
     $sertifikat = ($data['sertifikat']);
+    $foto = upload_file();
     $nama_petugas = ($data['nama_petugas']);
     $nik_petugas = ($data['nik_petugas']);
     $waktu_sensus = ($data['waktu_sensus']);
     $perubahan_terakhir = ($data['perubahan_terakhir']);
     $upt = ($data['upt']);
+    $verif = ($data['verif']);
 
-    $query = "INSERT INTO `sensus`(`id`, `nama`, `nik`, `usia`, `agama`, `gender`, `pendidikan`, `jml_keluarga`, `alamat`, `kelurahan`, `kecamatan`, `kabupaten`, `provinsi`, `latitude`, `longtitude`, `komoditas`, `kelompok`, `biota`, `jenis_usaha`, `status_kusuka`, `status_pemilik`, `luas_areal`, `media_pemeliharaan`, `kepadatan_pemeliharaan`, `teknologi`, `produksi`, `distribusi`, `harga_jual`, `jenis_pakan`, `jml_pakan`, `sumber_suplai`, `harga_pakan`, `sumber_benih`, `jml_benih`, `harga_benih`, `jml_tk`, `modal`, `sumber_modal`, `sumber_kredit`, `ipal`, `tandon`, `greenbelt`, `jarak_pantai`, `sumber_air`, `status_izin`, `status_nib`, `skala_usaha`, `asuransi`, `bantuan`, `penghargaan`, `dukungan_pemda`, `dukungan_pusat`, `nama_penyuluh`, `sertifikat`, `nama_petugas`, `nik_petugas`, `waktu_sensus`, `perubahan_terakhir`, `upt`) VALUES ('$id','$nama','$nik','$usia','$agama','$gender','$pendidikan','$jml_keluarga','$alamat','$kelurahan','$kecamatan','$kabupaten','$provinsi','$latitude','$longtitude','$komoditas','$kelompok','$biota','$jenis_usaha','$status_kusuka','$status_pemilik','$luas_areal','$media_pemeliharaan','$kepadatan_pemeliharaan','$teknologi','$produksi','$distribusi','$harga_jual','$jenis_pakan','$jml_pakan','$sumber_suplai','$harga_pakan','$sumber_benih','$jml_benih','$harga_benih','$jml_tk','$modal','$sumber_modal','$sumber_kredit','$ipal','$tandon','$greenbelt','$jarak_pantai','$sumber_air','$status_izin','$status_nib','$skala_usaha','$asuransi','$bantuan','$penghargaan','$dukungan_pemda','$dukungan_pusat','$nama_penyuluh','$sertifikat','$nama_petugas','$nik_petugas','$waktu_sensus','$perubahan_terakhir','$upt')";
+    $query = "INSERT INTO `sensus`(`id`, `nama`, `nik`, `usia`, `agama`, `gender`, `pendidikan`, `jml_keluarga`, `alamat`, `kelurahan`, `kecamatan`, `kabupaten`, `provinsi`, `latitude`, `longtitude`, `komoditas`, `kelompok`, `biota`, `jenis_usaha`, `status_kusuka`, `status_pemilik`, `luas_areal`, `media_pemeliharaan`, `kepadatan_pemeliharaan`, `teknologi`, `produksi`, `distribusi`, `harga_jual`, `jenis_pakan`, `jml_pakan`, `sumber_suplai`, `harga_pakan`, `sumber_benih`, `jml_benih`, `harga_benih`, `jml_tk`, `modal`, `sumber_modal`, `sumber_kredit`, `ipal`, `tandon`, `greenbelt`, `jarak_pantai`, `sumber_air`, `status_izin`, `status_nib`, `skala_usaha`, `asuransi`, `bantuan`, `penghargaan`, `dukungan_pemda`, `dukungan_pusat`, `nama_penyuluh`, `sertifikat`, `foto`, `nama_petugas`, `nik_petugas`, `waktu_sensus`, `perubahan_terakhir`, `upt`, `verif`) VALUES ('$id','$nama','$nik','$usia','$agama','$gender','$pendidikan','$jml_keluarga','$alamat','$kelurahan','$kecamatan','$kabupaten','$provinsi','$latitude','$longtitude','$komoditas','$kelompok','$biota','$jenis_usaha','$status_kusuka','$status_pemilik','$luas_areal','$media_pemeliharaan','$kepadatan_pemeliharaan','$teknologi','$produksi','$distribusi','$harga_jual','$jenis_pakan','$jml_pakan','$sumber_suplai','$harga_pakan','$sumber_benih','$jml_benih','$harga_benih','$jml_tk','$modal','$sumber_modal','$sumber_kredit','$ipal','$tandon','$greenbelt','$jarak_pantai','$sumber_air','$status_izin','$status_nib','$skala_usaha','$asuransi','$bantuan','$penghargaan','$dukungan_pemda','$dukungan_pusat','$nama_penyuluh','$sertifikat', '$foto','$nama_petugas','$nik_petugas','$waktu_sensus','$perubahan_terakhir','$upt','$verif')";
 
     mysqli_query($koneksi, $query);
 
     return mysqli_affected_rows($koneksi);
+    }
+
+    function upload_file()
+    {
+        $namaFile = $_FILES['foto']['name'];
+        $ukuranFile = $_FILES['foto']['size'];
+        $error = $_FILES['foto']['error'];
+        $tmpName = $_FILES['foto']['tmp_name'];
+
+        $extensifileValid = ['jpg', 'jpeg', 'png'];
+        $extensifile = explode('.', $namaFile);
+        $extensifile = strtolower(end($extensifile));
+
+        if (!in_array($extensifile, $extensifileValid)){
+            echo "<script> alert('Format Tidak Valid');
+            document.location.href = 'input1.php';
+            </script>";
+        die();
+        }
+
+        if ($ukuranFile > 2048000) {
+            echo "<script> alert('Ukuran File Max 2 MB');
+            document.location.href = 'input1.php';
+            </script>";
+        die();
+        }
+
+        $namaFileBaru = uniqid();
+        $namaFileBaru .= '.';
+        $namaFileBaru.= $extensifile;
+
+        move_uploaded_file($tmpName, 'img/' . $namaFileBaru);
+        return $namaFileBaru;
     }
 
  // Membuat fungsi hapus data
@@ -111,6 +146,12 @@
     function update($data)
     {
         global $koneksi;
+
+        if($_FILES['foto']['error'] === 4){
+            $foto = $data['fotolama'];
+        } else {
+            $foto = upload_file();
+        }
         
         $id = ($data['id']);
         $nama= ($data['nama']);
@@ -165,19 +206,63 @@
         $dukungan_pemda = ($data['dukungan_pemda']);
         $dukungan_pusat = ($data['dukungan_pusat']);
         $nama_penyuluh = ($data['nama_penyuluh']);
-        $sertifikat = ($data['sertifikat']);
+        $sertifikat = ($data['sertifikat']);     
         $nama_petugas = ($data['nama_petugas']);
         $nik_petugas = ($data['nik_petugas']);
         $waktu_sensus = ($data['waktu_sensus']);
         $perubahan_terakhir = ($data['perubahan_terakhir']);
         $upt = ($data['upt']);
 
-        $sql = "UPDATE `sensus` SET nama='$nama',nik='$nik',usia='$usia',agama='$agama',gender='$gender',pendidikan='$pendidikan',jml_keluarga='$jml_keluarga',alamat='$alamat',kelurahan='$kelurahan',kecamatan='$kecamatan',kabupaten='$kabupaten',provinsi='$provinsi',latitude='$latitude',longtitude='$longtitude',komoditas='$komoditas',kelompok='$kelompok',biota='$biota',jenis_usaha='$jenis_usaha',status_kusuka='$status_kusuka',status_pemilik='$status_pemilik',luas_areal='$luas_areal',media_pemeliharaan='$media_pemeliharaan',kepadatan_pemeliharaan='$kepadatan_pemeliharaan',teknologi='$teknologi',produksi='$produksi',distribusi='$distribusi',harga_jual='$harga_jual',jenis_pakan='$jenis_pakan',jml_pakan='$jml_pakan',sumber_suplai='$sumber_suplai',harga_pakan='$harga_pakan' ,sumber_benih='$sumber_benih',jml_benih='$jml_benih',harga_benih='$harga_benih',jml_tk='$jml_tk',modal='$modal',sumber_modal='$sumber_modal',sumber_kredit='$sumber_kredit',ipal='$ipal',tandon='$tandon',greenbelt='$greenbelt',jarak_pantai='$jarak_pantai',sumber_air='$sumber_air',status_izin='$status_izin',status_nib='$status_nib',skala_usaha='$skala_usaha',asuransi='$asuransi',bantuan='$bantuan',penghargaan='$penghargaan',dukungan_pemda='$dukungan_pemda',dukungan_pusat='$dukungan_pusat',nama_penyuluh='$nama_penyuluh',sertifikat='$sertifikat',nama_petugas='$nama_petugas',nik_petugas='$nik_petugas',waktu_sensus='$waktu_sensus',perubahan_terakhir='$perubahan_terakhir',upt='$upt' WHERE id = $id";
+        $sql = "UPDATE `sensus` SET nama='$nama',nik='$nik',usia='$usia',agama='$agama',gender='$gender',pendidikan='$pendidikan',jml_keluarga='$jml_keluarga',alamat='$alamat',kelurahan='$kelurahan',kecamatan='$kecamatan',kabupaten='$kabupaten',provinsi='$provinsi',latitude='$latitude',longtitude='$longtitude',komoditas='$komoditas',kelompok='$kelompok',biota='$biota',jenis_usaha='$jenis_usaha',status_kusuka='$status_kusuka',status_pemilik='$status_pemilik',luas_areal='$luas_areal',media_pemeliharaan='$media_pemeliharaan',kepadatan_pemeliharaan='$kepadatan_pemeliharaan',teknologi='$teknologi',produksi='$produksi',distribusi='$distribusi',harga_jual='$harga_jual',jenis_pakan='$jenis_pakan',jml_pakan='$jml_pakan',sumber_suplai='$sumber_suplai',harga_pakan='$harga_pakan' ,sumber_benih='$sumber_benih',jml_benih='$jml_benih',harga_benih='$harga_benih',jml_tk='$jml_tk',modal='$modal',sumber_modal='$sumber_modal',sumber_kredit='$sumber_kredit',ipal='$ipal',tandon='$tandon',greenbelt='$greenbelt',jarak_pantai='$jarak_pantai',sumber_air='$sumber_air',status_izin='$status_izin',status_nib='$status_nib',skala_usaha='$skala_usaha',asuransi='$asuransi',bantuan='$bantuan',penghargaan='$penghargaan',dukungan_pemda='$dukungan_pemda',dukungan_pusat='$dukungan_pusat',nama_penyuluh='$nama_penyuluh',sertifikat='$sertifikat',foto='$foto', nama_petugas='$nama_petugas',nik_petugas='$nik_petugas',waktu_sensus='$waktu_sensus',perubahan_terakhir='$perubahan_terakhir',upt='$upt' WHERE id = $id";
     
         mysqli_query($koneksi, $sql);
     
         return mysqli_affected_rows($koneksi);
     }
+
+function updateData($table, $data, $condition)
+{
+  global $koneksi;
+
+  $setValues = "";
+  $setParams = array();
+  foreach ($data as $key => $value) {
+    $setValues .= "$key = ?, ";
+    $setParams[] = $value;
+  }
+  $setValues = rtrim($setValues, ", ");
+
+  $conditionValues = "";
+  $conditionParams = array();
+  foreach ($condition as $key => $value) {
+    $conditionValues .= "$key = ? AND ";
+    $conditionParams[] = $value;
+  }
+  $conditionValues = rtrim($conditionValues, " AND ");
+
+  $stmt = $koneksi->prepare("UPDATE $table SET $setValues WHERE $conditionValues");
+
+  if (!$stmt) {
+    die("Error in preparing statement: " . $koneksi->error);
+  }
+
+  $types = str_repeat("s", count($setParams) + count($conditionParams));
+  $values = array_merge($setParams, $conditionParams);
+
+  if (!$stmt->bind_param($types, ...$values)) {
+    die("Error in binding parameters: " . $stmt->error);
+  }
+
+  // Menjalankan query
+  if ($stmt->execute()) {
+    return true;
+  } else {
+    return false;
+  }
+
+  $stmt->close();
+  $koneksi->close();
+}
 
 
 ?>

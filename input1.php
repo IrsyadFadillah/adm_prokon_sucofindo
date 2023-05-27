@@ -786,6 +786,10 @@ if (isset($_POST['tambah'])) {
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
                     <div class="modal-body">
+                    <div class="mb-3">
+                            <label for="foto" class="col-form-label">Foto Petugas</label>
+                            <input type="file" class="form-control" id="foto" name="foto" >
+                        </div>
                         <div class="mb-3">
                             <label for="nama_petugas" class="col-form-label">Nama Petugas</label>
                             <input type="text" class="form-control" id="nama_petugas" name="nama_petugas" >

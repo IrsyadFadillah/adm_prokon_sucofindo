@@ -24,7 +24,7 @@ header("Content-Disposition: attachment; filename=Data Sensus Pembudidaya.xls");
                                 <th colspan="5" style="border-color: black;">LINGKUNGAN</th>
                                 <th colspan="3" style="border-color: black;">PERIZINAN</th>
                                 <th colspan="7" style="border-color: black;">LAIN-LAIN</th>
-                                <th colspan="4" style="border-color: black;">ENUMERATOR/PETUGAS SENSUS</th>
+                                <th colspan="5" style="border-color: black;">ENUMERATOR/PETUGAS SENSUS</th>
                                 <th colspan="1"  style="border-color: black;">UPT</th>
                             </tr>
                             <tr class="table-border">
@@ -81,6 +81,7 @@ header("Content-Disposition: attachment; filename=Data Sensus Pembudidaya.xls");
                                 <th scope="col" style="border-color: black;">DUKUNGAN PUSAT</th>
                                 <th scope="col" style="border-color: black;">NAMA PENYULUH</th>
                                 <th scope="col" style="border-color: black;">SERTIFIKAT</th>
+                                <th scope="col" style="border-color: black;">FOTO PETUGAS</th>
                                 <th scope="col" style="border-color: black;">NAMA PETUGAS</th>
                                 <th scope="col" style="border-color: black;">NIK</th>
                                 <th scope="col" style="border-color: black;">WAKTU SENSUS</th>
@@ -145,6 +146,7 @@ header("Content-Disposition: attachment; filename=Data Sensus Pembudidaya.xls");
                                 <td><?php echo $row["dukungan_pusat"]; ?></td>
                                 <td><?php echo $row["nama_penyuluh"]; ?></td>
                                 <td><?php echo $row["sertifikat"]; ?></td>
+                                <td><img src="img/<?php echo $row["foto"]; ?>" width="80px" alt=""></td>
                                 <td><?php echo $row["nama_petugas"]; ?></td>
                                 <td><?php echo $row["nik_petugas"]; ?></td>
                                 <td><?php echo $row["waktu_sensus"]; ?></td>
