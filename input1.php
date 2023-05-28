@@ -901,7 +901,7 @@ if (isset($_POST['tambah'])) {
                     data.forEach((element) => {
                         tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
                     });
-                    document.getElementById("kota").innerHTML = tampung;
+                    document.getElementById("kabupaten").innerHTML = tampung;
                 });
         });
 
