@@ -1,5 +1,5 @@
 <?php
-    require ('../config.php');
+    require 'koneksi.php';
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
 
@@ -10,7 +10,7 @@
     require '../PHPMailer/src/SMTP.php';
 
     $email = $_POST['email'];
-    $nama = $_POST['nama'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
     $password = password_hash($password, PASSWORD_DEFAULT);
     $code = md5($email.date('Y-m-d'));
@@ -20,7 +20,7 @@
     if(mysqli_num_rows($query) > 0){
         echo '<script>alert("Email sudah terdaftar");</script>';
     }else {
-        $sql = "INSERT INTO users (nama,email,password,verif_code)VALUES('$nama','$email','$password','$code')";
+        $sql = "INSERT INTO users (username,email,password,verif_code)VALUES('$username','$email','$password','$code')";
         $query = mysqli_query($con,$sql);
 
         //Create a new PHPMailer instance
@@ -51,10 +51,10 @@
         $mail->SMTPAuth = true;
 
         //Username to use for SMTP authentication - use full email address for gmail
-        $mail->Username = 'setorantimothy6@gmail.com';
+        $mail->Username = 'shelenayasminnurghea@gmail.com';
 
         //Password to use for SMTP authentication
-        $mail->Password = 'pass email mu';
+        $mail->Password = 'shelena1203';
 
         //Set who the message is to be sent from
         $mail->setFrom('no-reply@yourwebsite.com', 'Your website service');
@@ -63,14 +63,14 @@
         //$mail->addReplyTo('replyto@example.com', 'First Last');
 
         //Set who the message is to be sent to
-        $mail->addAddress($email, $nama);
+        $mail->addAddress($email, $username);
 
         //Set the subject line
-        $mail->Subject = 'Verification Account - nama website';
+        $mail->Subject = 'Verification Account - username website';
 
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
-        $body = "Hi, ".$nama."<br>Plase verif your email before access our website : <br> http://localhost/php/verifemail/proses/confirmEmail.php?code=".$code;
+        $body = "Hi, ".$username."<br>Plase verif your email before access our website : <br> http://localhost/php/verifemail/proses/confirmEmail.php?code=".$code;
         $mail->Body = $body;
         //Replace the plain text body with one created manually
         $mail->AltBody = 'Verification Account';
