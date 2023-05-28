@@ -32,7 +32,7 @@
         </div>
         <div class="login-content">
             <form novalidate action="proseslogin.php" method="post">
-            <h2>Login Admin</h2>
+            <h2>Registrasi</h2>
             <div class="input-div one">
                 <div class="i">
                 <i class="fas fa-user"></i>
@@ -44,6 +44,15 @@
             </div>
             <div class="input-div pass">
                 <div class="i">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="div">
+                <h5>Email</h5>
+                <input type="email" class="input" name="email"/>
+                </div>
+            </div>
+            <div class="input-div pass">
+                <div class="i">
                 <i class="fas fa-lock"></i>
                 </div>
                 <div class="div">
@@ -51,7 +60,16 @@
                 <input type="password" class="input" name="password"/>
                 </div>
             </div>
-            <input type="submit" class="btn" value="login" />
+            <div class="input-div pass">
+                <div class="i">
+                <i class="fas fa-lock"></i>
+                </div>
+                <div class="div">
+                <h5>Confirm Password</h5>
+                <input type="password" class="input" name="cnfrm_password"/>
+                </div>
+            </div>
+            <input type="submit" class="btn" value="registrasi" />
             <a class="text-center" href="index.php">Kembali</a>
             </form>
         </div>
@@ -59,5 +77,4 @@
 
     <script type="text/javascript" src="js/login.js"></script>
 </body>
-
 </html>
