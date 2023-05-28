@@ -335,20 +335,28 @@ if (isset($_POST['tambah'])) {
                         <textarea class="form-control" id="alamat" name="alamat"></textarea>
                     </div>
                     <div class="mb-3">
-                        <label for="kelurahan" class="col-form-label">Kelurahan/ Desa:</label>
-                        <input type="text" class="form-control"  id="kelurahan" name="kelurahan">
-                    </div>
-                    <div class="mb-3">
-                        <label for="kecamatan" class="col-form-label">Kecamatan:</label>
-                        <input type="text" class="form-control"  id="kecamatan" name="kecamatan">
+                        <label for="provinsi" class="col-form-label">Provinsi:</label>                        
+                        <select class="form-select mb-3" aria-label="Default select example" id="provinsi" name="provinsi">
+                            <option value="" disabled selected hidden>Pilih Provinsi</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="kabupaten" class="col-form-label">Kabupaten/ Kota:</label>
-                        <input type="text" class="form-control"  id="kabupaten" name="kabupaten">
+                        <select class="form-select mb-3" aria-label="Default select example" id="kabupaten" name="kabupaten">
+                            <option value="" disabled selected hidden>Pilih Kabupaten/ Kota</option>
+                        </select>
                     </div>
                     <div class="mb-3">
-                        <label for="provinsi" class="col-form-label">Provinsi:</label>
-                        <input type="text" class="form-control"  id="provinsi" name="provinsi">
+                        <label for="kecamatan" class="col-form-label">Kecamatan:</label>
+                        <select class="form-select mb-3" aria-label="Default select example" id="kecamatan" name="kecamatan">
+                            <option value="" disabled selected hidden>Pilih Kecamatan</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="kelurahan" class="col-form-label">Kelurahan/ Desa:</label>
+                        <select class="form-select mb-3" aria-label="Default select example" id="kelurahan" name="kelurahan">
+                            <option value="" disabled selected hidden>Pilih Kelurahan</option>
+                        </select>
                     </div>
                     <div class="mb-3">
                         <label for="latitude" class="col-form-label">Latitude:</label>
@@ -862,6 +870,71 @@ if (isset($_POST['tambah'])) {
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <script>
+        fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/provinces.json`)
+            .then((response) => response.json())
+            .then((provinces) => {
+                var data = provinces;
+                var tampung = `<option>Pilih Provinsi</option>`;
+                data.forEach((element) => {
+                    tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+                });
+                document.getElementById("provinsi").innerHTML = tampung;
+            });
+    </script>
+    <script>
+        const selectProvinsi = document.getElementById('provinsi');
+        const selectKota = document.getElementById('kabupaten');
+        const selectKecamatan = document.getElementById('kecamatan');
+        const selectKelurahan = document.getElementById('kelurahan');
+
+        selectProvinsi.addEventListener('change', (e) => {
+            var provinsi = e.target.options[e.target.selectedIndex].dataset.prov;
+            fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/regencies/${provinsi}.json`)
+                .then((response) => response.json())
+                .then((regencies) => { 
+                    var data = regencies;
+                    var tampung = `<option>Pilih Kabupaten/ Kota</option>`;
+                    document.getElementById('kabupaten').innerHTML = '<option>Pilih Kabupaten/ Kota</option>';
+                    document.getElementById('kecamatan').innerHTML = '<option>Pilih Kecamatan</option>';
+                    document.getElementById('kelurahan').innerHTML = '<option>Pilih Kelurahan</option>';
+                    data.forEach((element) => {
+                        tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+                    });
+                    document.getElementById("kota").innerHTML = tampung;
+                });
+        });
+
+        selectKota.addEventListener('change', (e) => {
+            var kota = e.target.options[e.target.selectedIndex].dataset.prov;
+            fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/districts/${kota}.json`)
+                .then((response) => response.json())
+                .then((districts) => {
+                    var data = districts;
+                    var tampung = `<option>Pilih Kecamatan</option>`;
+                    document.getElementById('kecamatan').innerHTML = '<option>Pilih Kecamatan</option>';
+                    document.getElementById('kelurahan').innerHTML = '<option>Pilih Kelurahan</option>';
+                    data.forEach((element) => {
+                        tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+                    });
+                    document.getElementById("kecamatan").innerHTML = tampung;
+                });
+        });
+        selectKecamatan.addEventListener('change', (e) => {
+            var kecamatan = e.target.options[e.target.selectedIndex].dataset.prov;
+            fetch(`https://kanglerian.github.io/api-wilayah-indonesia/api/villages/${kecamatan}.json`)
+                .then((response) => response.json())
+                .then((villages) => {
+                    var data = villages;
+                    var tampung = `<option>Pilih Kelurahan</option>`;
+                    document.getElementById('kelurahan').innerHTML = '<option>Pilih Kelurahan</option>';
+                    data.forEach((element) => {
+                        tampung += `<option data-prov="${element.id}" value="${element.name}">${element.name}</option>`;
+                    });
+                    document.getElementById("kelurahan").innerHTML = tampung;
+                });
+        });
+    </script>
 </body>
 
 </html>
