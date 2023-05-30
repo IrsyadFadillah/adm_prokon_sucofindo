@@ -55,7 +55,7 @@
                 </div>
             </div>
             <input type="submit" class="btn" value="registrasi" />
-            <a class="text-center" href="index.php">Kembali</a>
+            <a class="text-center" href="login.php">Kembali</a>
             </form>
         </div>
     </div>
