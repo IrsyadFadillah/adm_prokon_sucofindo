@@ -1,5 +1,7 @@
 <?php
-    require 'koneksi.php';
+    session_start();
+   include("koneksi.php");
+
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
 
@@ -70,7 +72,7 @@
 
         //Read an HTML message body from an external file, convert referenced images to embedded,
         //convert HTML into a basic plain-text alternative body
-        $body = "Hi, ".$username."<br>Plase verif your email before access our website : <br> http://localhost/adm_prokon_sucofindo/confirm.php?code=".$code;
+        $body = "Hi, ".$username."<br>Plase verif your email before access our website : <br> http://localhost/adm_prokon_sucofindo/confirmEmail.php".$code;
         $mail->Body = $body;
         //Replace the plain text body with one created manually
         $mail->AltBody = 'Verification Account';
