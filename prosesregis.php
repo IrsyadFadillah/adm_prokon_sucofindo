@@ -3,6 +3,7 @@
    include("koneksi.php");
 
     use PHPMailer\PHPMailer\PHPMailer;
+    use PHPMailer\PHPMailer\Exception;
     use PHPMailer\PHPMailer\SMTP;
 
     require 'PHPMailer/src/Exception.php';
@@ -56,7 +57,7 @@
         $mail->Username = 'kelompoksuco@gmail.com';
 
         //Password to use for SMTP authentication
-        $mail->Password = 'kelompok4sucofindo';
+        $mail->Password = 'wmigdioiomurwxcq';
 
         //Set who the message is to be sent from
         $mail->setFrom('no-reply@yourwebsite.com', 'Your website service');
