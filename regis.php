@@ -54,15 +54,6 @@
                 <input type="password" class="input" name="password"/>
                 </div>
             </div>
-            <div class="input-div pass">
-                <div class="i">
-                <i class="fas fa-lock"></i>
-                </div>
-                <div class="div">
-                <h5>Confirm Password</h5>
-                <input type="password" class="input" name="cnfrm_password"/>
-                </div>
-            </div>
             <input type="submit" class="btn" value="registrasi" />
             <a class="text-center" href="index.php">Kembali</a>
             </form>

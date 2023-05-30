@@ -3,11 +3,11 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
 
-    require '../PHPMailer/src/Exception.php';
-    require '../PHPMailer/src/OAuth.php';
-    require '../PHPMailer/src/PHPMailer.php';
-    require '../PHPMailer/src/POP3.php';
-    require '../PHPMailer/src/SMTP.php';
+    require 'PHPMailer/src/Exception.php';
+    require 'PHPMailer/src/OAuth.php';
+    require 'PHPMailer/src/PHPMailer.php';
+    require 'PHPMailer/src/POP3.php';
+    require 'PHPMailer/src/SMTP.php';
 
     $email = $_POST['email'];
     $username = $_POST['username'];
@@ -15,13 +15,13 @@
     $password = password_hash($password, PASSWORD_DEFAULT);
     $code = md5($email.date('Y-m-d'));
 
-    $sql = "SELECT * FROM users where email='$email'";
-    $query = mysqli_query($con,$sql);
+    $sql = "SELECT * FROM user where email='$email'";
+    $query = mysqli_query($koneksi,$sql);
     if(mysqli_num_rows($query) > 0){
         echo '<script>alert("Email sudah terdaftar");</script>';
     }else {
-        $sql = "INSERT INTO users (username,email,password,verif_code)VALUES('$username','$email','$password','$code')";
-        $query = mysqli_query($con,$sql);
+        $sql = "INSERT INTO user (username,email,password,verif_code)VALUES('$username','$email','$password','$code')";
+        $query = mysqli_query($koneksi,$sql);
 
         //Create a new PHPMailer instance
         $mail = new PHPMailer;
