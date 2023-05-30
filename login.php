@@ -53,6 +53,8 @@
             </div>
             <input type="submit" class="btn" value="login" />
             <a class="text-center" href="index.php">Kembali</a>
+            
+            <a class="text-center " href="regis.php">Registrasi</a>
             </form>
         </div>
     </div>

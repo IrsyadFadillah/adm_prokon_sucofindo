@@ -31,10 +31,10 @@
     {
     global $koneksi;
 
-    $id = ($data['id']);
+    
     $nama= ($data['nama']);
     $nik = ($data['nik']);
-	$usia = ($data['usia']);
+	  $usia = ($data['usia']);
     $agama = ($data['agama']);
     $gender = ($data['gender']);
     $pendidikan = ($data['pendidikan']);
@@ -93,7 +93,7 @@
     $upt = ($data['upt']);
     $verif = ($data['verif']);
 
-    $query = "INSERT INTO `sensus`(`id`, `nama`, `nik`, `usia`, `agama`, `gender`, `pendidikan`, `jml_keluarga`, `alamat`, `kelurahan`, `kecamatan`, `kabupaten`, `provinsi`, `latitude`, `longtitude`, `komoditas`, `kelompok`, `biota`, `jenis_usaha`, `status_kusuka`, `status_pemilik`, `luas_areal`, `media_pemeliharaan`, `kepadatan_pemeliharaan`, `teknologi`, `produksi`, `distribusi`, `harga_jual`, `jenis_pakan`, `jml_pakan`, `sumber_suplai`, `harga_pakan`, `sumber_benih`, `jml_benih`, `harga_benih`, `jml_tk`, `modal`, `sumber_modal`, `sumber_kredit`, `ipal`, `tandon`, `greenbelt`, `jarak_pantai`, `sumber_air`, `status_izin`, `status_nib`, `skala_usaha`, `asuransi`, `bantuan`, `penghargaan`, `dukungan_pemda`, `dukungan_pusat`, `nama_penyuluh`, `sertifikat`, `foto`, `nama_petugas`, `nik_petugas`, `waktu_sensus`, `perubahan_terakhir`, `upt`, `verif`) VALUES ('$id','$nama','$nik','$usia','$agama','$gender','$pendidikan','$jml_keluarga','$alamat','$kelurahan','$kecamatan','$kabupaten','$provinsi','$latitude','$longtitude','$komoditas','$kelompok','$biota','$jenis_usaha','$status_kusuka','$status_pemilik','$luas_areal','$media_pemeliharaan','$kepadatan_pemeliharaan','$teknologi','$produksi','$distribusi','$harga_jual','$jenis_pakan','$jml_pakan','$sumber_suplai','$harga_pakan','$sumber_benih','$jml_benih','$harga_benih','$jml_tk','$modal','$sumber_modal','$sumber_kredit','$ipal','$tandon','$greenbelt','$jarak_pantai','$sumber_air','$status_izin','$status_nib','$skala_usaha','$asuransi','$bantuan','$penghargaan','$dukungan_pemda','$dukungan_pusat','$nama_penyuluh','$sertifikat', '$foto','$nama_petugas','$nik_petugas','$waktu_sensus','$perubahan_terakhir','$upt','$verif')";
+    $query = "INSERT INTO `sensus`(`nama`, `nik`, `usia`, `agama`, `gender`, `pendidikan`, `jml_keluarga`, `alamat`, `kelurahan`, `kecamatan`, `kabupaten`, `provinsi`, `latitude`, `longtitude`, `komoditas`, `kelompok`, `biota`, `jenis_usaha`, `status_kusuka`, `status_pemilik`, `luas_areal`, `media_pemeliharaan`, `kepadatan_pemeliharaan`, `teknologi`, `produksi`, `distribusi`, `harga_jual`, `jenis_pakan`, `jml_pakan`, `sumber_suplai`, `harga_pakan`, `sumber_benih`, `jml_benih`, `harga_benih`, `jml_tk`, `modal`, `sumber_modal`, `sumber_kredit`, `ipal`, `tandon`, `greenbelt`, `jarak_pantai`, `sumber_air`, `status_izin`, `status_nib`, `skala_usaha`, `asuransi`, `bantuan`, `penghargaan`, `dukungan_pemda`, `dukungan_pusat`, `nama_penyuluh`, `sertifikat`, `foto`, `nama_petugas`, `nik_petugas`, `waktu_sensus`, `perubahan_terakhir`, `upt`, `verif`) VALUES ('$nama','$nik','$usia','$agama','$gender','$pendidikan','$jml_keluarga','$alamat','$kelurahan','$kecamatan','$kabupaten','$provinsi','$latitude','$longtitude','$komoditas','$kelompok','$biota','$jenis_usaha','$status_kusuka','$status_pemilik','$luas_areal','$media_pemeliharaan','$kepadatan_pemeliharaan','$teknologi','$produksi','$distribusi','$harga_jual','$jenis_pakan','$jml_pakan','$sumber_suplai','$harga_pakan','$sumber_benih','$jml_benih','$harga_benih','$jml_tk','$modal','$sumber_modal','$sumber_kredit','$ipal','$tandon','$greenbelt','$jarak_pantai','$sumber_air','$status_izin','$status_nib','$skala_usaha','$asuransi','$bantuan','$penghargaan','$dukungan_pemda','$dukungan_pusat','$nama_penyuluh','$sertifikat', '$foto','$nama_petugas','$nik_petugas','$waktu_sensus','$perubahan_terakhir','$upt','$verif')";
 
     mysqli_query($koneksi, $query);
 
