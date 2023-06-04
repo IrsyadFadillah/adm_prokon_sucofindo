@@ -23,15 +23,15 @@
 <?php if (isset($_GET['alert'])) : ?>
     <?php if($_GET['alert'] = 'gagal') : ?>
       <script>alert('Username atau Password anda salah, coba lagi !')</script>
-      <?php endif ?>
-      <?php endif ?>
+    <?php endif ?>
+<?php endif ?>
 
     <div class="container">
         <div class="img">
             <img src="img/Logo_sucofindo.png" />
         </div>
         <div class="login-content">
-            <form novalidate action="proseslogin.php" method="post">
+            <form novalidate action="proseslogin.php" method="POST">
             <h2>Login Admin</h2>
             <div class="input-div one">
                 <div class="i">
