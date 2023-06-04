@@ -12,7 +12,7 @@
             $sql =  "UPDATE user set is_verified=1 where id_user=$id";
             $query = mysqli_query($koneksi,$sql);
             if($query){
-                echo "VERIFIKASI BERHASIL ";
+                header("location:berhasil.php");
             }else{
                 echo "VERIFIKASI GAGAL ERROR : ".$query;
             }

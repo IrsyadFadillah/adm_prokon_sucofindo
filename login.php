@@ -22,7 +22,7 @@
 <body>
 <?php if (isset($_GET['alert'])) : ?>
     <?php if($_GET['alert'] = 'gagal') : ?>
-      <script>alert('Username atau Password anda salah, coba lagi !')</script>
+      <script>alert('Email atau Password anda salah, coba lagi !')</script>
     <?php endif ?>
 <?php endif ?>
 
@@ -35,11 +35,11 @@
             <h2>Login Admin</h2>
             <div class="input-div one">
                 <div class="i">
-                <i class="fas fa-user"></i>
+                <i class="fas fa-envelope"></i>
                 </div>
                 <div class="div">
-                <h5>Username</h5>
-                <input type="text" class="input" name="username"/>
+                <h5>Email</h5>
+                <input type="email" class="input" name="email"/>
                 </div>
             </div>
             <div class="input-div pass">
@@ -54,7 +54,7 @@
             <input type="submit" class="btn" value="login" />
             <a class="text-center" href="index.php">Kembali</a>
             
-            <a class="text-center " href="regis.php">Registrasi</a>
+            <a class="text-center " href="regis.php">Belum Punya Akun? Silahkan Registrasi disini</a>
             </form>
         </div>
     </div>

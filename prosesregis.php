@@ -60,7 +60,7 @@
         $mail->Password = 'wmigdioiomurwxcq';
 
         //Set who the message is to be sent from
-        $mail->setFrom('no-reply@yourwebsite.com', 'Your website service');
+        $mail->setFrom('no-reply@yourwebsite.com', 'PROYEK KONSULTASI SUCOFINDO');
 
         //Set an alternative reply-to address
         //$mail->addReplyTo('replyto@example.com', 'First Last');
@@ -82,7 +82,8 @@
         if (!$mail->send()) {
             echo 'Mailer Error: '. $mail->ErrorInfo;
         } else {
-            echo 'Register sukses silahkan login !';
+            echo"<script>alert('Registrasi Sukses Silahkan Login')</script>";
+            header("location:sukses.php");
             //Section 2: IMAP
             //Uncomment these to save your message in the 'Sent Mail' folder.
             #if (save_mail($mail)) {
