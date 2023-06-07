@@ -189,8 +189,8 @@ $totalverif = $row['totalverif'];
                 <div class="navbar-nav align-items-center ms-auto">
                     <div class="nav-item dropdown">
                     <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION["username"]; ?></span>
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"> 
+                            <span class="d-none d-lg-inline-flex"></span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="logout.php" class="dropdown-item">Log Out</a>
@@ -207,7 +207,7 @@ $totalverif = $row['totalverif'];
                     <div class="col-sm-6 col-xl-6">
                         <div class="bg-light rounded d-flex align-items-center justify-content-between p-4">
                             <div class="ms-5">
-                                <h2 style="color:cornflowerblue" >WELCOME BACK <?php echo $_SESSION["username"]; ?></h2>
+                                <h2 style="color:cornflowerblue" >WELCOME BACK, admin </h2>
                             </div>
                         </div>
                     </div>

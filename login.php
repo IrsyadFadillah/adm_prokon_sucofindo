@@ -35,11 +35,11 @@
             <h2>Login Admin</h2>
             <div class="input-div one">
                 <div class="i">
-                <i class="fas fa-envelope"></i>
+                <i class="fas fa-user"></i>
                 </div>
                 <div class="div">
-                <h5>Email</h5>
-                <input type="email" class="input" name="email"/>
+                <h5>username</h5>
+                <input type="text" class="input" name="username"/>
                 </div>
             </div>
             <div class="input-div pass">

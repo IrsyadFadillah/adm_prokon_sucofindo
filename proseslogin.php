@@ -2,10 +2,10 @@
     session_start();
     include("koneksi.php");
 
-    $email = $_POST['email'];
+    $username = $_POST['username'];
     $password = $_POST['password'];
 
-    $sql = "SELECT * FROM user where email = '$email'";
+    $sql = "SELECT * FROM user where username = '$username'";
     $query = mysqli_query($koneksi,$sql);
 
     if(mysqli_num_rows($query) == 0 ){
