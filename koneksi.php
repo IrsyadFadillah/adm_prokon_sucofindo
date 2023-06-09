@@ -111,12 +111,12 @@
         $extensifile = explode('.', $namaFile);
         $extensifile = strtolower(end($extensifile));
 
-        if (!in_array($extensifile, $extensifileValid)){
-            echo "<script> alert('Format Tidak Valid');
-            document.location.href = 'input1.php';
-            </script>";
-        die();
-        }
+        // if (!in_array($extensifile, $extensifileValid)){
+        //     echo "<script> alert('Format Tidak Valid');
+        //     document.location.href = 'input1.php';
+        //     </script>";
+        // die();
+        // }
 
         if ($ukuranFile > 2048000) {
             echo "<script> alert('Ukuran File Max 2 MB');

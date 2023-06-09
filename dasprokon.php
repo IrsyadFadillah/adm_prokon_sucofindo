@@ -546,26 +546,31 @@ $totalverif = $row['totalverif'];
                         <div class="modal-body">
                         <div class="mb-3">
                             <label for="alamat" class="col-form-label">Alamat:</label>
-                            <input type="text" class="form-control" id="alamat" name="alamat" value="<?= $row['alamat'];?>">
+                            <textarea class="form-control" id="alamat" name="alamat"></textarea>
                         </div>
                         <div class="mb-3">
-                            <label for="provinsi" class="col-form-label">Provinsi:</label>
-                            <select class="form-select mb-3" aria-label="Default select example" id="provinsi" name="provinsi" >
-                                <option value="" disabled selected hidden><?= $row['provinsi'];?></option>
-                                
+                            <label for="provinsi" class="col-form-label">Provinsi:</label>                        
+                            <select class="form-select mb-3" aria-label="Default select example" id="provinsi" name="provinsi">
+                                <option value="" disabled selected hidden>Pilih Provinsi</option>
                             </select>
                         </div>
                         <div class="mb-3">
                             <label for="kabupaten" class="col-form-label">Kabupaten/ Kota:</label>
-                            <input type="text" class="form-control"  id="kabupaten" name="kabupaten" value="<?= $row['kabupaten'];?>">
+                            <select class="form-select mb-3" aria-label="Default select example" id="kabupaten" name="kabupaten">
+                                <option value="" disabled selected hidden>Pilih Kabupaten/ Kota</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="kecamatan" class="col-form-label">Kecamatan:</label>
-                            <input type="text" class="form-control"  id="kecamatan" name="kecamatan" value="<?= $row['kecamatan'];?>">
+                            <select class="form-select mb-3" aria-label="Default select example" id="kecamatan" name="kecamatan">
+                                <option value="" disabled selected hidden>Pilih Kecamatan</option>
+                            </select>
                         </div>
                         <div class="mb-3">
                             <label for="kelurahan" class="col-form-label">Kelurahan/ Desa:</label>
-                            <input type="text" class="form-control"  id="kelurahan" name="kelurahan" value="<?= $row['kelurahan'];?>">
+                            <select class="form-select mb-3" aria-label="Default select example" id="kelurahan" name="kelurahan">
+                                <option value="" disabled selected hidden>Pilih Kelurahan</option>
+                            </select>
                         </div>
                         
                         <div class="mb-3">

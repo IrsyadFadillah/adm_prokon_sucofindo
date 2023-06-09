@@ -102,7 +102,7 @@ if (isset($_POST['tambah'])) {
                     <div class="nav-item dropdown">
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                            <span class="d-none d-lg-inline-flex"><?php echo $_SESSION["username"]; ?></span>
+                            <span class="d-none d-lg-inline-flex">ADMIN</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
                             <a href="logout.php" class="dropdown-item">Log Out</a>
