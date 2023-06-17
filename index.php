@@ -353,7 +353,7 @@ $row = mysqli_fetch_assoc($result);
                         <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</a>
                     </div>
                     <div class="col-lg-6">
-                        <img class="img-fluid rounded wow zoomIn" data-wow-delay="0.5s" src="img/ssdashboard.jpg">
+                        <img class="img-fluid rounded wow zoomIn" data-wow-delay="0.5s" src="img/dasprokon.png">
                     </div>
                 </div>
             </div>
@@ -365,7 +365,7 @@ $row = mysqli_fetch_assoc($result);
             <div class="container">
                 <div class="row g-5 py-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <img class="img-fluid rounded" src="img/sslogin.jpg">
+                        <img class="img-fluid rounded" src="img/login.png">
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="d-flex align-items-center mb-4">
@@ -376,14 +376,14 @@ $row = mysqli_fetch_assoc($result);
                         <p class="mb-4">Admin akan dihadapkan dengan halaman login sebelum masuk ke halaman dashboard</p>
                         <p><i class="fa fa-check-circle text-primary me-3"></i>Masukkan alamat E-mail yang sudah didaftarkan</p>
                         <p><i class="fa fa-check-circle text-primary me-3"></i>Masukkan Password</p>
-                        <p class="mb-0"><i class="fa fa-check-circle text-primary me-3"></i>lalu Sign in untuk masuk ke halaman admin</p>
+                        <p class="mb-0"><i class="fa fa-check-circle text-primary me-3"></i>lalu LOGIN untuk masuk ke halaman admin</p>
                     </div>
                 </div>
                 <div class="row g-5 py-5 align-items-center flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
                         <div class="d-flex align-items-center mb-4">
                             <h1 class="mb-0">02</h1>
-                            <span class="bg-primary mx-2" style="width: 30px; height: 2px;"></span>
+                            <span class="bg-primary mx-3" style="width: 30px; height: 2px;"></span>
                             <h5 class="mb-0">Input Data</h5>
                         </div>
                         <p class="mb-4">Halaman Input Data</p>
@@ -391,7 +391,7 @@ $row = mysqli_fetch_assoc($result);
                         <p><i class="fa fa-check-circle text-primary me-3"></i>Pilih kolom yang akan diisi</p>
                     </div>
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
-                        <img class="img-fluid rounded" src="img/ssinput.jpg">
+                        <img class="img-fluid rounded" src="img/input11.png">
                     </div>
                 </div>
                 <div class="row g-5 py-5 align-items-center">
