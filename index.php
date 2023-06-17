@@ -53,6 +53,7 @@ $row = mysqli_fetch_assoc($result);
 		});
 	</script>
 
+
     <style>
         .table-container {
           max-height: 600px; /* Set the maximum height for vertical scrolling */
@@ -77,6 +78,7 @@ $row = mysqli_fetch_assoc($result);
 </head>
 
 <body>
+<div>
     <div class="container-xxl bg-white p-0">
         <!-- Spinner Start -->
         <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
@@ -85,7 +87,6 @@ $row = mysqli_fetch_assoc($result);
             </div>
         </div>
         <!-- Spinner End -->
-
 
         <!-- Navbar & Hero Start -->
         <div class="container-xxl position-relative p-0" id="home">
@@ -123,7 +124,6 @@ $row = mysqli_fetch_assoc($result);
                   <div class="carousel-item">
                     <img src="img/4.jpg" class="d-block w-100" alt="..." height="630" width="300">
                   </div>
-                  
                   
                   <div class="container-xxl bg-primary hero-header">
                     <div class="container">
@@ -322,27 +322,24 @@ $row = mysqli_fetch_assoc($result);
             </div>
         </div>
         </div>
-        <br>
-        <br>
+        
         <br>
         <br>
         
-
-
         <!-- About Start -->
         <div class="container-xxl py-6" id="about">
             <div class="container">
                 <div class="row g-5 flex-column-reverse flex-lg-row">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
                         <h1 class="mb-4">Mempermudah dalam Pengelolaan Data</h1>
-                        <p class="mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna dolore erat amet</p>
+                        <!-- <p class="mb-4">Diam dolor diam ipsum et tempor sit. Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo eirmod magna dolore erat amet</p> -->
                         <div class="d-flex mb-4">
                             <div class="flex-shrink-0 btn-square rounded-circle bg-primary text-white">
                                 <i class="fa fa-check"></i>
                             </div>
                             <div class="ms-4">
                                 <h5>First Working Process</h5>
-                                <p class="mb-0">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo magna</p>
+                                <!-- <p class="mb-0">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo magna</p> -->
                             </div>
                         </div>
                         <div class="d-flex mb-4">
@@ -351,7 +348,7 @@ $row = mysqli_fetch_assoc($result);
                             </div>
                             <div class="ms-4">
                                 <h5>24/7 Hours Support</h5>
-                                <p class="mb-0">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo magna</p>
+                                <!-- <p class="mb-0">Aliqu diam amet diam et eos labore. Clita erat ipsum et lorem et sit, sed stet no labore lorem sit clita duo justo magna</p> -->
                             </div>
                         </div>
                         <a href="" class="btn btn-primary py-sm-3 px-sm-5 rounded-pill mt-3">Read More</a>
@@ -364,9 +361,8 @@ $row = mysqli_fetch_assoc($result);
         </div>
         <!-- About End -->
 
-
         <!-- Overview Start -->
-        <div class="container-xxl bg-light my-6 py-5" id="features">
+        <div class="container-fluid container-xxl bg-light my-2 py-5" id="features">
             <div class="container">
                 <div class="row g-5 py-5 align-items-center">
                     <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -414,80 +410,39 @@ $row = mysqli_fetch_assoc($result);
                 </div>
             </div>
         </div>
-        <!-- Overview End -->
-
-
-        
-        
-
-        <!-- Footer Start -->
-        <footer class="container-fluid bg-dark text-body footer wow fadeIn" data-wow-delay="0.1s">
-            <div class="container py-5 px-lg-5">
-                <div class="row g-5">
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                        <p><i class="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</p>
-                        <p><i class="fa fa-phone-alt me-3"></i>+012 345 67890</p>
-                        <p><i class="fa fa-envelope me-3"></i>info@example.com</p>
-                        <div class="d-flex pt-2">
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-instagram"></i></a>
-                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Quick Link<span></span></p>
-                        <a class="btn btn-link" href="">About</a>
-                        <a class="btn btn-link" href="">Contact</a>
-                        <a class="btn btn-link" href="">Privacy Policy</a>
-                        <a class="btn btn-link" href="">Terms & Conditions</a>
-                        <a class="btn btn-link" href="">Support</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Community<span></span></p>
-                        <a class="btn btn-link" href="">Career</a>
-                        <a class="btn btn-link" href="">Leadership</a>
-                        <a class="btn btn-link" href="">Strategy</a>
-                        <a class="btn btn-link" href="">History</a>
-                        <a class="btn btn-link" href="">Components</a>
-                    </div>
-                    <div class="col-md-6 col-lg-3">
-                        <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
-                        <p>Lorem ipsum dolor sit amet elit. Phasellus nec pretium mi. Curabitur facilisis ornare velit non vulpu</p>
-                        <div class="position-relative w-100 mt-3">
-                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="text" placeholder="Your Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-none position-absolute top-0 end-0 mt-1 me-2"><i class="fa fa-paper-plane text-primary fs-4"></i></button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container px-lg-5">
-                <div class="copyright">
-                    <div class="row">
-                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
-                            &copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved. 
-							
-                        </div>
-                        <div class="col-md-6 text-center text-md-end">
-                            <div class="footer-menu">
-                                <a href="">Home</a>
-                                <a href="">Cookies</a>
-                                <a href="">Help</a>
-                                <a href="">FQAs</a>
-                            </div>
-                        </div>
+    </div>
+    <div class="container-fluid">
+    <footer class="bg-dark text-body footer wow fadeIn" data-wow-delay="0.1s" style="top: 200px;">
+        <div class="container py-5 px-lg-5">
+            <div class="row g-5">
+                <div class="col-md-6 col-lg-4">
+                    <p class="section-title text-white h5 mb-4">Alamat<span></span></p>
+                    <p><i class="fa fa-map-marker-alt me-3"></i>Jl. Raya Pasar Minggu, Kav. 34 Jakarta</p>
+                    <p><i class="fa fa-phone-alt me-3"></i>+62 217-983-666</p>
+                    <p><i class="fa fa-envelope me-3"></i>customer.service@sucofindo.co.id</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social" href="https://www.instagram.com/sucofindoofficial/"><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
             </div>
         </div>
-        <!-- Footer End -->
-
-
-        <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+        <div class="container px-lg-5">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a class="border-bottom" href="#">Sucofindo 2023</a>, All Right Reserved. 
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+</div>
+</div>
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -501,5 +456,4 @@ $row = mysqli_fetch_assoc($result);
     <script src="jsuser/main.js"></script>
     <script src="js/table.js"></script>
 </body>
-
 </html>
