@@ -103,7 +103,6 @@ $row = mysqli_fetch_assoc($result);
                         <a href="#table" class="nav-item nav-link">Table</a>
                         <a href="#about" class="nav-item nav-link">About</a>
                         <a href="#features" class="nav-item nav-link">Features</a>
-                        
                         <a href="#contact" class="nav-item nav-link">Contact</a>
                     </div>
                     <a href="dasprokon.php" class="btn btn-light rounded-pill py-2 px-4 ms-3 d-none d-lg-block">ADMIN</a>
@@ -411,7 +410,7 @@ $row = mysqli_fetch_assoc($result);
             </div>
         </div>
     </div>
-    <div class="container-fluid">
+    <div class="container-fluid" id="contact">
     <footer class="bg-dark text-body footer wow fadeIn" data-wow-delay="0.1s" style="top: 200px;">
         <div class="container py-5 px-lg-5">
             <div class="row g-5">
@@ -427,19 +426,27 @@ $row = mysqli_fetch_assoc($result);
                         <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
+                <div class="col-md-6 col-lg-6">
+                    <div style="position: relative; overflow: hidden; padding-top: 50%;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253829.73183441325!2d106.53693539453123!3d-6.251929500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f3b604d3e705%3A0x6e1172d03b934e20!2sSUCOFINDO!5e0!3m2!1sid!2sid!4v1686967653681!5m2!1sid!2sid" 
+                        width="100%" height="70%" style="border:0; position: absolute; top: 0; left: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
             </div>
         </div>
+        
         <div class="container px-lg-5">
             <div class="copyright">
                 <div class="row">
                     <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
                         &copy; <a class="border-bottom" href="#">Sucofindo 2023</a>, All Right Reserved. 
-                        
                     </div>
                 </div>
             </div>
         </div>
-    </div>
+    </footer>
+</div>
+
     <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
 </div>
 </div>
